@@ -1,0 +1,118 @@
+/* Arrive Logistics blue-color #31abdf*/
+
+/*---------------- header -------------------*/
+
+.header-image {
+  border-top: 10px solid #fff;
+  margin-bottom: 10px;
+  height: 10vh;
+  background:url(../assets/arrive_logistics_logo.png) center center no-repeat;
+  background-size: contain;
+}
+
+/*---------------- App.js -------------------*/
+
+.search-results-title,
+.error-search-results {
+  text-align: center;
+}
+.search-results-title span {
+  border-bottom: 2px solid #31abdf;
+}
+
+/*---------------- Dropdown.js -------------------*/
+
+.dropdown-container {
+  width: 50%;
+}
+
+/*---------------- SearchResults.js -------------------*/
+
+.search-results-container {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+.search-results-container:hover {
+  background-color: #31abdf;
+  color: #fff;
+}
+.search-results-container > div {
+  flex: 1;
+}
+.search-results__name {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.search-results__locations {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.search-results__locations > h6 {
+  width: 30%;
+}
+
+/*---------------- CarrierCard.js -------------------*/
+
+.card-container {
+  margin: 0 auto !important;
+  margin-bottom: 20px !important;
+}
+.card-content-carrierPrice {
+  padding: 1% 1% 1% 20px !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card-content-carrierPrice div {
+  flex: 1;
+}
+.card-content-carrierCapabilities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card > div {
+  padding-left: 20px;
+}
+.card-content-contactInfo {
+  display: flex;
+  flex-direction: row;
+}
+.card-content-contactInfo span {
+  margin: 0 10px;
+}
+
+/*---------------- @media -------------------*/
+
+@media screen and (max-width: 1060px) {
+  .search-results__locations {
+    display: flex;
+    flex-direction: column;
+  }
+  .search-results__locations > h6 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card-content-contactInfo {
+    flex-direction: column;
+  }
+  .card-content-contactInfo h6 span {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .search-results-container,
+  .card {
+    width: 100% !important;
+  }
+  h5 {
+    font-size: 1.25rem !important;
+  }
+}
