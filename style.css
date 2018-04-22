@@ -1,7 +1,9 @@
-/* Arrive Logistics blue-color #31abdf*/
+/* Remove the green line from Material CSS */
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+  box-shadow: none !important;
+}
 
 /*---------------- header -------------------*/
-
 .header-image {
   border-top: 10px solid #fff;
   margin-bottom: 10px;
