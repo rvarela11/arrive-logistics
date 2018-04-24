@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatPhone } from '../../utils';
 
 const CarrierCardDetails = props => {
   return <div className="card container card-container">
@@ -16,7 +17,7 @@ const CarrierCardDetails = props => {
     <div className="card-content-contactInfo">
       <h6>{props.contactName}<span>|</span></h6>
       <h6>{props.contactEmail}<span>|</span></h6>
-      <h6>{props.contactPhone}</h6>
+      <h6>{formatPhone(props.contactPhone)}</h6>
     </div>
   </div>
 }

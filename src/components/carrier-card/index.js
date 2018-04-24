@@ -36,20 +36,10 @@ class CarrierCard extends Component {
 
     // If the apiDataSearchResultsCarrier array is empty, make an API call and store the response in the components state
     if(this.state.apiDataSearchResultsCarrier.length === 0){
-      let URL = `http://arrive-interview-api.azurewebsites.net/api/carrierDetails/${this.props.id}`;
-
-      fetch(URL)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        const apiDataSearchResultsCarrier = this.state.apiDataSearchResultsCarrier;
-        apiDataSearchResultsCarrier.push(data);
-        this.setState({apiDataSearchResultsCarrier})
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      fetch(`http://arrive-interview-api.azurewebsites.net/api/carrierDetails/${this.props.id}`)
+      .then( response => response.json())
+      .then(data => this.setState({apiDataSearchResultsCarrier: [...this.state.apiDataSearchResultsCarrier, data]}))
+      .catch(error => console.log(error));
     }
   }
 
