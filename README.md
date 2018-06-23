@@ -2,7 +2,7 @@
 
 ### About
 
-A search box where the user can search for carriers by city name.
+A search box where a user can search for carriers by city name.
 
 ### Technologies
 
